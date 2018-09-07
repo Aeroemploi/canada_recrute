@@ -10,8 +10,6 @@
     </title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-    <base href="">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,7 +20,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- global css -->
 
-    <link href="{{ asset('assets/css/app.css') }}" type="text/css"/>
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css"/>
     <!-- font Awesome -->
 
     <!-- end of global css -->

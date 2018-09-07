@@ -9,16 +9,16 @@
 {{-- page level styles --}}
 @section('header_styles')
 
-    <link href="{{ asset('assets/vendors/fullcalendar/css/fullcalendar.css') }}" type="text/css"/>
-    <link href="{{ asset('assets/css/pages/calendar_custom.css') }}" type="text/css"/>
-    <link media="all"
+    <link href="{{ asset('assets/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" media="all"
           href="{{ asset('assets/vendors/bower-jvectormap/css/jquery-jvectormap-1.2.2.css') }}"/>
-    <link href="{{ asset('assets/vendors/animate/animate.min.css') }}">
-    <link href="{{ asset('assets/css/pages/only_dashboard.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('assets/vendors/animate/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/only_dashboard.css') }}"/>
     <meta name="_token" content="{{ csrf_token() }}">
-    <link type="text/css"
+    <link rel="stylesheet" type="text/css"
           href="{{ asset('assets/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css') }}">
-    <link href="{{ asset('assets/css/frontend/landing-page.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/frontend/landing-page.css') }}"/>
     <style>
         .parallax {
             /* The image used */
