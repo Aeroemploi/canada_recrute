@@ -17,7 +17,7 @@ class SetLanguage
      */
     public function handle($request, Closure $next)
     {
-        if(app()->environment() == 'production' && \Session::get('locale') != '' && \Session::get('locale') != null){
+        if(app()->environment() == 'production'){
             session(['locale' => \Session::get('locale')]);
             $locale = session('locale', \Session::get('locale'));
             App::setLocale($locale);
