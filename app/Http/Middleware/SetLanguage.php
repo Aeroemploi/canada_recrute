@@ -18,7 +18,7 @@ class SetLanguage
     public function handle($request, Closure $next)
     {
         $frHosts = [
-            'testsite.test',
+            'http://canadarecrute.com/',
         ];
 
         if(app()->environment() == 'production'){
