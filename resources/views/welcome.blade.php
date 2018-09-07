@@ -140,6 +140,4 @@
 @section('footer_scripts')
     <!-- Bootstrap -->
     <script type="text/javascript" src="{{ asset('assets/js/frontend/bootstrap.min.js') }}"></script>
-
-    {{ $_SERVER['HTTP_HOST'] }}
 @stop
