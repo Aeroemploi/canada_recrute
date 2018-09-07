@@ -41,7 +41,7 @@
     <div class="container-fluid">
         <div class="parallax ">
             <div>
-                @if(config('app.locale') == 'fr')
+                @if(session('locale') == 'fr')
                     <h1 class="title">{{ $template->header_title_fr }}</h1>
                 @else
                     <h1 class="title">{{ $template->header_title_en }}</h1>
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="secondary">
-                @if(config('app.locale') == 'fr')
+                @if(session('locale') == 'fr')
                     {!! $template->description_fr !!}
                 @else
                     {!! $template->description_en !!}
