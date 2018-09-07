@@ -7,15 +7,15 @@
  */
 
 namespace App\Http\Controllers;
-use Redirect;
-use Session;
 
 class ChangeLanguageController
 {
     public function switchLang($lang){
         if (array_key_exists($lang, config('app.locales'))) {
-            Session::put('locale', "$lang");
+            $locale = session('locale', $lang);
+            App::setLocale($locale);
+            Carbon::setLocale($locale);
         }
-        return Redirect::back()->with('success', $lang);
+        return Redirect::back();
     }
 }
