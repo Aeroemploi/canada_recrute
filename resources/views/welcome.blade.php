@@ -33,6 +33,7 @@
     </style>
 @stop
 @section('content')
+    @include('includes.language')
     <!-- Notifications -->
     <div id="notific">
         @include('notifications')
