@@ -11,7 +11,7 @@ namespace App\Http\Controllers;
 class ChangeLanguageController
 {
     public function switchLang($lang){
-        if (array_key_exists($lang, Config::get('languages'))) {
+        if (array_key_exists($lang, config('app.locale'))) {
             Session::put('locale', "$lang");
         }
         return Redirect::back();
