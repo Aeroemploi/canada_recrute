@@ -11,7 +11,7 @@
 
     <link href="{{ asset('assets/vendors/fullcalendar/css/fullcalendar.css') }}" type="text/css"/>
     <link href="{{ asset('assets/css/pages/calendar_custom.css') }}" type="text/css"/>
-    <link rel="stylesheet" media="all"
+    <link media="all"
           href="{{ asset('assets/vendors/bower-jvectormap/css/jquery-jvectormap-1.2.2.css') }}"/>
     <link href="{{ asset('assets/vendors/animate/animate.min.css') }}">
     <link href="{{ asset('assets/css/pages/only_dashboard.css') }}"/>
