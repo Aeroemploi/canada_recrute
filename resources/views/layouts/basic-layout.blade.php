@@ -20,7 +20,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- global css -->
 
-    <link href="{{ asset('public/assets/css/app.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css"/>
     <!-- font Awesome -->
 
     <!-- end of global css -->
