@@ -3,7 +3,7 @@
     .topnav-right {
         float: right;
         top: 10px;
-        right: 10px;
+        left: 10px;
     }
     .topnav-right a {
         color: #000000;

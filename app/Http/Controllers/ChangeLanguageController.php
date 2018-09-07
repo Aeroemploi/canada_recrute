@@ -16,6 +16,6 @@ class ChangeLanguageController
         if (array_key_exists($lang, config('app.locales'))) {
             Session::put('locale', "$lang");
         }
-        return Redirect::back();
+        return Redirect::back()->with('success', $lang);
     }
 }
