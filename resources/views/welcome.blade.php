@@ -42,7 +42,7 @@
         @include('includes.language')
         <div class="parallax ">
             <div>
-                @if(app()->getLocale() == 'fr')
+                @if(\Session::get('locale') == 'fr')
                     <h1 class="title">{{ $template->header_title_fr }}</h1>
                 @else
                     <h1 class="title">{{ $template->header_title_en }}</h1>
