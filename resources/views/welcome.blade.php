@@ -33,13 +33,13 @@
     </style>
 @stop
 @section('content')
-    @include('includes.language')
     <!-- Notifications -->
     <div id="notific">
         @include('notifications')
     </div>
 
     <div class="container-fluid">
+        @include('includes.language')
         <div class="parallax ">
             <div>
                 @if(app()->getLocale() == 'fr')
