@@ -12,10 +12,8 @@ class ChangeLanguageController
 {
     public function switchLang($lang){
         if (array_key_exists($lang, config('app.locales'))) {
-            session(['locale' => $lang]);
-            $locale = session('locale', $lang);
-            App::setLocale($locale);
-            Carbon::setLocale($locale);
+            App::setLocale($lang);
+            Carbon::setLocale($lang);
         }
         return Redirect::back();
     }
