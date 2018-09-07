@@ -18,7 +18,7 @@ class SetLanguage
     public function handle($request, Closure $next)
     {
         $frHosts = [
-            'http://canadarecrute.com/',
+            'http://canadarecrute.com',
         ];
 
         if(app()->environment() == 'production'){
@@ -30,7 +30,7 @@ class SetLanguage
                 $locale = session('locale', 'en');
             }
         } else {
-            if ($_SERVER['HTTP_HOST'] == 'testsite.test' || $_SERVER['HTTP_HOST'] == 'codebase.ca') {
+            if ($_SERVER['HTTP_HOST'] == 'http://canadarecrute.com' || $_SERVER['HTTP_HOST'] == 'codebase.ca') {
                 session(['locale' => 'fr']);
                 $locale = session('locale', 'fr');
             } else {
