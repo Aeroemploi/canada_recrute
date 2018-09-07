@@ -12,7 +12,7 @@ use Session;
 
 class ChangeLanguageController
 {
-    public function switchLang($lang = 'en'){
+    public function switchLang($lang){
         if (array_key_exists($lang, config('app.locales'))) {
             Session::put('locale', "$lang");
         }
