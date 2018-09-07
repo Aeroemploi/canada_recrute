@@ -8,14 +8,22 @@ use Illuminate\Support\Facades\App;
 
 class SetLanguage
 {
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
     public function handle($request, Closure $next)
     {
-        if (Session::has('locale') AND array_key_exists(Session::get('locale'), config('app.locale'))) {
-            App::setLocale(Session::get('locale'));
+        if(app()->environment() == 'production' && \Session::get('locale') != '' && \Session::get('locale') != null){
+            session(['locale' => \Session::get('locale')]);
+            $locale = session('locale', \Session::get('locale'));
+            App::setLocale($locale);
+            Carbon::setLocale($locale);
         }
-        else { // This is optional as Laravel will automatically set the fallback language if there is none specified
-            App::setLocale('fr');
-        }
+
         return $next($request);
     }
 }
