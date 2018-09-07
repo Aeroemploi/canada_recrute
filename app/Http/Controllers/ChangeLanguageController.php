@@ -8,15 +8,12 @@
 
 namespace App\Http\Controllers;
 
-use App;
-
 class ChangeLanguageController
 {
     public function switchLang($lang){
         if (array_key_exists($lang, config('app.locales'))) {
-            App::setLocale($lang);
-            //Carbon::setLocale($lang);
+            Session::put('locale', "$lang");
         }
-        return Redirect::back();
+        return Redirect::back()->with('success', $lang);
     }
 }

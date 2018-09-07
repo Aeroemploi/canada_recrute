@@ -15,32 +15,18 @@ class SetLanguage
      * @param  \Closure  $next
      * @return mixed
      */
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
     public function handle($request, Closure $next)
     {
-        $frHosts = [
-            'canadarecrute.com',
-        ];
+        $language = Session::get('locale', Config::get('app.locale'));
 
-        if(app()->environment() == 'production'){
-            if(in_array($_SERVER['HTTP_HOST'], $frHosts)){
-                session(['locale' => 'fr']);
-                $locale = session('locale', 'fr');
-            } else {
-                session(['locale' => 'en']);
-                $locale = session('locale', 'en');
-            }
-        } else {
-            if ($_SERVER['HTTP_HOST'] == 'canadarecrute.com' || $_SERVER['HTTP_HOST'] == 'codebase.ca') {
-                session(['locale' => 'fr']);
-                $locale = session('locale', 'fr');
-            } else {
-                session(['locale' => 'en']);
-                $locale = session('locale', 'en');
-            }
-        }
-
-        App::setLocale($locale);
-        Carbon::setLocale($locale);
+        App::setLocale($language);
 
         return $next($request);
     }
