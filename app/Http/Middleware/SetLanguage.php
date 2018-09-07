@@ -26,7 +26,9 @@ class SetLanguage
     {
         $language = Session::get('locale', Config::get('app.locale'));
 
-        App::setLocale($language);
+        if($language !== null) {
+            App::setLocale($language);
+        }
 
         return $next($request);
     }
