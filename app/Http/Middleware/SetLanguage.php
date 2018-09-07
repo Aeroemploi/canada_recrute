@@ -17,11 +17,8 @@ class SetLanguage
      */
     public function handle($request, Closure $next)
     {
-        if(app()->environment() == 'production'){
-            session(['locale' => \Session::get('locale')]);
-            $locale = session('locale', \Session::get('locale'));
-            App::setLocale($locale);
-            Carbon::setLocale($locale);
+        if(app()->environment() == 'production' && \Session::has('locale')){
+            App::setLocale(\Session::get('locale'));
         }
 
         return $next($request);

@@ -11,7 +11,7 @@ namespace App\Http\Controllers;
 class ChangeLanguageController
 {
     public function switchLang($lang){
-        session(['locale' => $lang]);
+        \Session::put('locale', $lang);
         return \Redirect::back();
     }
 }
