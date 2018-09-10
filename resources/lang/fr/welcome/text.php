@@ -7,6 +7,8 @@ return [
     'title'             => 'Bienvenue à l\'accueuil',
     'recruitment'       => 'Scéance de recrutement',
     'time'              => 'de :from à :to',
+    'avail_job'         => 'Emplois disponibles',
+    'propulse_by'         => 'Propulser par',
 
     'form'              => [
         'firstname'         => 'Prénom',
@@ -28,7 +30,6 @@ return [
         'login'             => 'connecté'
     ],
     'footer'            => [
-        'excerpt'           => 'Et plus encore!',
-        'conclusion'           => 'Il nous fera plaisir de vous rencontré!'
+        'impatient'           => 'Nous sommes impatients de vous rencontrer!',
     ]
 ];

@@ -7,9 +7,19 @@ body {
 }
 
 div .title {
-    position: absolute;
-    top: 50px;
-    left: 30px;
+    text-align: center;
+    color: #b0762e;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+div .title-left {
+    text-align: left;
+    color: #b0762e;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 30px;
 }
 
 div.imageContainer img {
@@ -27,6 +37,10 @@ div{
 
 .header {
     margin-top: 20px;
+}
+
+.header h2 {
+    color: #ffffff;
 }
 
 .header-block {
@@ -60,5 +74,220 @@ footer {
 @media (max-width: 960px) {
     .title {
         font-size: 1.6em;
+    }
+}
+
+header {
+    min-height: 375px;
+}
+
+.hastag {
+    position:relative;
+    top: 50px;
+    left: 35px;
+}
+
+.hastag h2 {
+    font-size: 36px;
+    text-align: left;
+    vertical-align: middle;
+    color: #b88e2e;
+}
+
+.hastag h2 span {
+    font-size: 36px;
+    color: #816104;
+}
+
+.canada_dare {
+    position:relative;
+    top: 170px;
+    left: 35px;
+}
+
+.canada_dare h1 {
+    text-align: center;
+    font-size: 46px;
+    color: #816104;
+}
+
+.canada_dare span.subtitle {
+    text-align: center;
+    font-size: 36px;
+    color: #b0762e;
+}
+
+#reg_form .form-group {
+    width: 90%;
+    text-align: center;
+    margin: 15px auto;
+}
+
+#reg_form .form-group.name {
+    width: 45%;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .hastag h2 {
+        font-size: 24px;
+        text-align: left;
+        vertical-align: middle;
+        color: #b88e2e;
+    }
+
+    .hastag h2 span {
+        font-size: 24px;
+        color: #816104;
+    }
+
+    .canada_dare h1 {
+        text-align: center;
+        font-size: 36px;
+        color: #816104;
+    }
+
+    .canada_dare span.subtitle {
+        text-align: center;
+        font-size: 24px;
+        color: #b0762e;
+    }
+}
+
+.decoration {
+    position: absolute;
+    top: -15px;
+    left: 46%;
+    background: rgba(135,136,138, 1);
+}
+
+.parallax_wrapper .wrapper {
+    margin: 0 auto;
+    max-width: 690px;
+    max-height: 595px;
+    background: rgba(128,129,132, 0.93);
+}
+
+.parallax_wrapper .inner {
+    position: relative;
+    margin: 50px auto;
+    max-width: 565px;
+    border: 1px solid #ffffff;
+}
+
+.parallax_wrapper .file {
+    color: #ffffff;
+    text-align: left;
+}
+
+#reg_form .form-group.checkbox {
+    color: #ffffff;
+    text-align: left !important;
+}
+
+#pic {
+    display: inline;
+}
+
+.fileinput-new {
+    color: #ffffff;
+}
+
+.checkbox label {
+    color: #ffffff;
+}
+
+.checkbox label a {
+    color: #816104;
+}
+
+.input-text div {
+    text-align: left;
+}
+
+.fileinput>.form-control {
+    width: 62% !important;
+    border-right: 0;
+}
+
+.desc {
+    width:60%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.jobs {
+    padding-top: 30px;
+}
+
+.jobs .indeed-jobs div.job {
+    float: left;
+    text-align:left;
+    width: 348px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #808184;
+    color: #816104;
+    min-height: 135px;
+    transition-timing-function: linear;
+    transition-duration: 500ms;
+}
+
+.job:hover {
+    background: #808184;
+    color: #ffffff;
+}
+
+.jobs .indeed-jobs div.job p a, .jobs .indeed-jobs div.job p span {
+    color: #816104;
+    transition-timing-function: linear;
+    transition-duration: 500ms;
+}
+
+.jobs .indeed-jobs div.job p:hover a, .jobs .indeed-jobs div.job p:hover span {
+    color: #ffffff;
+}
+
+.jobs .indeed-jobs div.job p {
+    max-width: 230px;
+    margin: 25px auto 0;
+}
+
+footer {
+    min-height: 250px;
+    position: relative;
+}
+
+footer h3 {
+    margin-top: 35px;
+    font-size: 3em;
+    color: #b0762e;
+    font-weight: bolder;
+}
+
+footer .auray_sourcing {
+    margin-top: 50px;
+    width: 350px;
+    float: right;
+}
+
+.job p{
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    footer {
+        min-height: 350px;
+        position: relative;
+    }
+
+    .jobs .indeed-jobs div.job {
+        width: 300px;
+    }
+
+    .fileinput>.form-control {
+        width: 100% !important;
+        border-right: 0;
     }
 }

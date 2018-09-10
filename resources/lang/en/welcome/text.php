@@ -7,6 +7,8 @@ return [
     'title'             => 'Welcome Home',
     'recruitment'       => 'Recruitment session',
     'time'              => 'from :from to :to',
+    'avail_job'         => 'Available Jobs',
+    'propulse_by'         => 'Propulse by',
 
     'form'              => [
         'firstname'         => 'First Name',
@@ -28,7 +30,6 @@ return [
         'login'             => 'Log In',
     ],
     'footer'            => [
-        'excerpt'           => 'And many more!',
-        'conclusion'           => 'We are looking forward to meeting you!'
+        'impatient'           => 'We are impatient to meet you!',
     ]
 ];
