@@ -89,7 +89,7 @@
                             <h2>@lang('welcome/text.recruitment') <br />@lang('welcome/text.time', [ 'from' => '7:00am', 'to' => '7:00pm'])</h2>
                         </div>
                         <div class="form-container">
-                            <form action="{{ route('register') }}" method="POST" enctype="multipart/form-data" id="reg_form">
+                            <form action="{{ route('simple.register') }}" method="POST" enctype="multipart/form-data" id="reg_form">
                                 <!-- CSRF Token -->
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
@@ -111,7 +111,7 @@
                                            value="{!! old('email') !!}" >
                                     {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                                 </div>
-                                <div class="form-group {{ $errors->first('password', 'has-error') }}">
+                                <!--<div class="form-group {{ $errors->first('password', 'has-error') }}">
                                     <label class="sr-only"> @lang('welcome/text.form.password')</label>
                                     <input type="password" class="form-control" id="Password1" name="password" placeholder="@lang('welcome/text.form.password')">
                                     {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
@@ -121,7 +121,7 @@
                                     <input type="password" class="form-control" id="Password2" name="password_confirm"
                                            placeholder="@lang('welcome/text.form.confirmpassword')">
                                     {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
-                                </div>
+                                </div>-->
                                 <div class="clearfix"></div>
                                 <div class="form-group {{ $errors->first('file', 'has-error') }}">
                                     <div class="file">

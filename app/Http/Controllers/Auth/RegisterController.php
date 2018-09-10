@@ -131,4 +131,48 @@ class RegisterController extends Controller
         }
         return Redirect::route('home')->with('error', $error);
     }
+
+    /**
+     * Handles custom user registration to use with our application
+     *
+     * @param Request $request
+     * @return Redirect
+     */
+    public function simple_user_registration(UserRequest $request)
+    {
+        //upload image for header
+        if ($file = $request->file('file')) {
+            try {
+                if($this->is_valid_type($file->extension())) {
+                    $extension = $file->extension();
+                    $destinationPath = public_path() . '/uploads/files/';
+                    $safeName = str_random(10) . '.' . $extension;
+                    $file->move($destinationPath, $safeName);
+                    $file_path = $safeName;
+                } else {
+                    throw new \Exception();
+                }
+            } catch (\Exception $e) {
+                $error = trans('templates/message.error.file_type_error');
+            }
+        }
+
+        try {
+            // Register the user
+            $user = new User();
+
+            $user->file = $file_path;
+            $user->first_name = $request['first_name'];
+            $user->last_name = $request['last_name'];
+            $user->email = $request['email'];
+
+            $user->save();
+
+            // Redirect to the home page with success menu
+            return Redirect::route('home')->with('success', trans('users/message.success.create'));
+        } catch (\Exception $e) {
+            $error = trans('users/message.error.create');
+        }
+        return Redirect::route('home')->with('error', $error);
+    }
 }

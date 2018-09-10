@@ -33,6 +33,7 @@ Route::post('forgot-password', 'AuthController@postForgotPassword')->name('signu
 # Register routes
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@user_registration');
+Route::post('simple/register', 'Auth\RegisterController@user_registration')->name('simple.register');
 
 # Forgot Password Confirmation
 Route::get('forgot-password/{userId}/{passwordResetCode}', 'AuthController@getForgotPasswordConfirm')->name('forgot-password-confirm');
