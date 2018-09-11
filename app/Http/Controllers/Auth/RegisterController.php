@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Http\Requests\SimpleUserRequest;
+use App\SimpleUser;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
+use Mail;
 use Redirect;
 
 class RegisterController extends Controller
@@ -138,7 +142,7 @@ class RegisterController extends Controller
      * @param Request $request
      * @return Redirect
      */
-    public function simple_user_registration(UserRequest $request)
+    public function simple_user_registration(SimpleUserRequest $request)
     {
         //upload image for header
         if ($file = $request->file('file')) {
@@ -159,7 +163,7 @@ class RegisterController extends Controller
 
         try {
             // Register the user
-            $user = new User();
+            $user = new SimpleUser();
 
             $user->file = $file_path;
             $user->first_name = $request['first_name'];
@@ -168,6 +172,14 @@ class RegisterController extends Controller
 
             $user->save();
 
+            $local = (Session::has('locale'))? Session::get('locale') : 'en';
+
+            Mail::send('emails.welcome_'.$local, [], function($message) use ($user)
+            {
+                $message->from('info@canadarecrute.com', 'Info');
+
+                $message->to($user->email)->subject('Auray Sourcing info');
+            });
             // Redirect to the home page with success menu
             return Redirect::route('home')->with('success', trans('users/message.success.create'));
         } catch (\Exception $e) {
