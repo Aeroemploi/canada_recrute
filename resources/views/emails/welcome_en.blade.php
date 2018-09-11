@@ -1,24 +1,21 @@
-@component('mail::layout')
-    {{-- Header --}}
-    @slot('header')
-        @component('mail::header', ['url' => config('app.url')])
+@extends('emails/layouts/emailTemplate')
+
+@section('content')
+    <div class="header">
+        <h1>
             Auray Sourcing
-        @endcomponent
-    @endslot
+        </h1>
+    </div>
+    <div class="container">
+        # Welcome  {!! $user_array['user_name'] !!},<br>
 
-    {{-- Body --}}
-    # Welcome  {!! $user['user_name'] !!},<br>
-
-    We thank you for your subscription of the canada recruit events.<br />
-    Nous vous remerçions de vous êtes inscrit pour l'événement canada recrute.<br />
+        We thank you for your subscription of the canada recruit events.<br />
+        Nous vous remerçions de vous êtes inscrit pour l'événement canada recrute.<br />
 
 
-    Regards,
-
-    {{-- Footer --}}
-    @slot('footer')
-    @component('mail::footer')
-    &copy; 2018 Tous les droits réservé à Auray Sourcing
-@endcomponent
-@endslot
-@endcomponent
+        Regards,
+    </div>
+    <div class="footer">
+        &copy; 2018All right reserved to Auray Sourcing
+    </div>
+@endsection

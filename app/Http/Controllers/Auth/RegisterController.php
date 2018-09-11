@@ -174,7 +174,11 @@ class RegisterController extends Controller
 
             $local = (Session::has('locale'))? Session::get('locale') : 'en';
 
-            Mail::send('emails.welcome_'.$local, [], function($message) use ($user)
+            $user_array = [
+                'user_name' => $user->email
+            ];
+
+            Mail::send('emails.welcome_'.$local, ['user_array' => $user_array], function($message) use ($user)
             {
                 $message->from('info@canadarecrute.com', 'Info');
 
@@ -183,7 +187,7 @@ class RegisterController extends Controller
             // Redirect to the home page with success menu
             return Redirect::route('home')->with('success', trans('users/message.success.create'));
         } catch (\Exception $e) {
-            $error = trans('users/message.error.create');
+            $error = $e->getMessage();
         }
         return Redirect::route('home')->with('error', $error);
     }
