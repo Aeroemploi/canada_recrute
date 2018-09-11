@@ -2,9 +2,13 @@
 
 namespace App\Http\Middleware;
 
-use Carbon\Carbon;
 use Closure;
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
 
 class SetLanguage
 {
@@ -17,10 +21,12 @@ class SetLanguage
      */
     public function handle($request, Closure $next)
     {
-        if(app()->environment() == 'production' && \Session::has('locale')){
-            App::setLocale(\Session::get('locale'));
+        $raw_locale = Session::get('locale');
+        if (in_array($raw_locale, Config::get('app.locales'))) {
+            $locale = $raw_locale;
         }
-
+        else $locale = Config::get('app.locale');
+        App::setLocale($locale);
         return $next($request);
     }
 }

@@ -18,7 +18,9 @@ Route::pattern('slug', '[a-z0-9- _]+');
 # Home route
 Route::get('/', 'HomeController@getWelcome')->name('home');
 
-Route::get('/switch_lang/{lang}', 'ChangeLanguageController@switchLang')->name('switch');
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/switch_lang/{lang}', 'ChangeLanguageController@switchLang')->name('switch');
+});
 
 # Lock screen
 Route::get('{id}/lockscreen', 'UsersController@lockscreen')->name('lockscreen');

@@ -55,16 +55,16 @@
             <div class="container">
                 <div class="hastag">
                     <h2>
-                        <span>#Canada</span>Recrute <span><img
+                        <span>#@lang('welcome/text.header.canada')</span>@lang('welcome/text.header.recrute') <span><img
                                 src="{{asset('assets/images/feuille.png')}}" alt="feuille canada"></span>
                     </h2>
                 </div>
                 <div class="canada_dare">
                     <h1>
-                        Osez le canada
+                        @lang('welcome/text.header.dare')
                     </h1>
                     <span class="subtitle">
-                        Plus de 100000 poste à pourvoir
+                        @lang('welcome/text.header.more_than')
                     </span>
                 </div>
             </div>
@@ -128,12 +128,15 @@
                                         <label class="control-label">@lang('welcome/text.form.file_upload')</label>
                                     </div>
                                     <div class="input-text">
+                                        <div class="preview_image">
+                                            <img id="image_upload_preview" width="300" src="" alt="">
+                                        </div>
                                         <div class="fileinput fileinput-new" data-provides="fileinput">
                                             <span class="fileinput-new">@lang('welcome/text.form.control.select')&nbsp;&nbsp;</span>
                                             <!--<span class="fileinput-exists">@lang('welcome/text.form.control.change')</span>-->
                                             <input id="pic" name="file" type="file" class="form-control"/>
-                                            <a href="#" class="btn btn-outline-danger fileinput-exists"
-                                               data-dismiss="fileinput">@lang('welcome/text.form.control.remove')</a>
+                                            <button id="remove" type="button" class="btn btn-outline-danger fileinput-exists"
+                                               data-dismiss="fileinput">@lang('welcome/text.form.control.remove')</button>
                                         </div>
                                     </div>
                                     {!! $errors->first('file', '<span class="help-block">:message</span>') !!}
@@ -280,6 +283,32 @@
     </div>
 @stop
 @section('footer_scripts')
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#image_upload_preview').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function reset_input_field() {
+            $("#pic").wrap('<form>').closest('form').get(0).reset();
+            $("#pic").unwrap();
+            $('#image_upload_preview').attr('src', '');
+        }
+
+        $("#pic").change(function () {
+            readURL(this);
+        });
+
+        $("#remove").on('click', reset_input_field);
+    </script>
+
     <!-- Bootstrap -->
     <script type="text/javascript" src="{{ asset('assets/js/frontend/bootstrap.min.js') }}"></script>
 @stop

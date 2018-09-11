@@ -9,6 +9,12 @@ return [
     'time'              => 'de :from à :to',
     'avail_job'         => 'Emplois disponibles',
     'propulse_by'         => 'Propulser par',
+    'header'            => [
+        'canada' => 'Canada',
+        'recrute' => 'Recrute',
+        'dare' => 'Osez le canada',
+        'more_than' => 'Plus de 100000 poste à pourvoir',
+    ],
 
     'form'              => [
         'firstname'         => 'Prénom',

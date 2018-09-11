@@ -1,13 +1,13 @@
 <style>
     /* Right-aligned section inside the top navigation */
     .topnav-right {
-        float: right;
+        position: absolute;
         top: 10px;
-        left: 10px;
+        right: 10px;
     }
     .topnav-right a {
         color: #000000;
-        font-size: 14px;
+        font-size: 18px;
     }
 </style>
 <div class="topnav-right">

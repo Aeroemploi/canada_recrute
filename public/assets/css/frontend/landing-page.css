@@ -276,6 +276,10 @@ footer .auray_sourcing {
     cursor: pointer;
 }
 
+.input-text .preview_image {
+    text-align: center;
+}
+
 @media (max-width: 400px) {
     footer {
         min-height: 350px;

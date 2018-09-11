@@ -9,7 +9,12 @@ return [
     'time'              => 'from :from to :to',
     'avail_job'         => 'Available Jobs',
     'propulse_by'         => 'Propulse by',
-
+    'header'            => [
+        'canada' => 'Canada',
+        'recrute' => 'Recruit',
+        'dare' => 'Dare the canada',
+        'more_than' => 'More than 100000 jobs to fill',
+    ],
     'form'              => [
         'firstname'         => 'First Name',
         'lastname'          => 'Last Name',

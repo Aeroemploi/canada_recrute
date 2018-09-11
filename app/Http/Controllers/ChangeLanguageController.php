@@ -8,10 +8,20 @@
 
 namespace App\Http\Controllers;
 
-class ChangeLanguageController
+use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use Config;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+
+
+class ChangeLanguageController extends Controller
 {
     public function switchLang($lang){
-        \Session::put('locale', $lang);
-        return \Redirect::back();
+        if (in_array($lang, \Config::get('app.locales'))) {
+            Session::put('locale', $lang);
+        }
+        return redirect()->back();
     }
 }
