@@ -172,88 +172,17 @@
                 <div class="jobs">
                     <div class=" vc_custom_1533952339789">
                         <div id="text-block-12" class="mk-text-block   indeed-jobs">
+                            @foreach($jobs as $job)
                                 <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/12b1056a8127ef272c8e/electromechanical/"
-                                          title="Electromechanical"><strong>Electromechanical</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
+                                    <p><a class="job-title" target="_blank"
+                                          href="{{ $job->link }}"
+                                          title="{{ (app()->getLocale() == 'fr')? $job->job_title_fr : $job->job_title_en }}"><strong>{{ (app()->getLocale() == 'fr')? $job->job_title_fr : $job->job_title_en }}</strong></a><br><span>{{ $job->location }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ trans('welcome/' . \App\Job::JOBS_TYPES[$job->job_type]) }}</span><br><a
                                             class="apply"
-                                            href="https://auray.com/en/indeed-jobs/12b1056a8127ef272c8e/electromechanical/"
-                                            title="Electromechanical">Apply</a></p>
+                                            target="_blank"
+                                            href="{{ $job->link }}"
+                                            title="{{ (app()->getLocale() == 'fr')? $job->job_title_fr : $job->job_title_en }}">@lang('welcome/text.apply')</a></p>
                                 </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/a59198616c830d63b07e/automobile-mechanic/"
-                                          title="Automobile Mechanic"><strong>Automobile Mechanic</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/a59198616c830d63b07e/automobile-mechanic/"
-                                            title="Automobile Mechanic">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/63323d6a219e48a00287/heavy-duty-equipment-mechanic/"
-                                          title="Heavy Duty Equipment Mechanic"><strong>Heavy Duty Equipment
-                                                Mechanic</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/63323d6a219e48a00287/heavy-duty-equipment-mechanic/"
-                                            title="Heavy Duty Equipment Mechanic">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/e2f245aec4f69b5f10b7/welder/"
-                                          title="Welder"><strong>Welder</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/e2f245aec4f69b5f10b7/welder/"
-                                            title="Welder">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/cca368794539865d5f10/machinist/"
-                                          title="Machinist"><strong>Machinist</strong></a><br><span>Québec City, QC&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/cca368794539865d5f10/machinist/"
-                                            title="Machinist">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/43d5bc6f1011900e7e1e/registered-nurse/"
-                                          title="Registered Nurse"><strong>Registered Nurse</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/43d5bc6f1011900e7e1e/registered-nurse/"
-                                            title="Registered Nurse">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/75288ff8d8b3e20f977b/user-support-technician/"
-                                          title="User Support Technician"><strong>User Support
-                                                Technician</strong></a><br><span>Québec City, QC&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/75288ff8d8b3e20f977b/user-support-technician/"
-                                            title="User Support Technician">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/e8b2a5eb9c19195de87f/web-designer-and-developer/"
-                                          title="Web Designer and Developer"><strong>Web Designer and Developer</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/e8b2a5eb9c19195de87f/web-designer-and-developer/"
-                                            title="Web Designer and Developer">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/ad6f8b46ea227b8e9a0f/programmer/"
-                                          title="Programmer"><strong>Programmer</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/ad6f8b46ea227b8e9a0f/programmer/"
-                                            title="Programmer">Apply</a></p>
-                                </div>
-                                <div class="job">
-                                    <p><a class="job-title"
-                                          href="https://auray.com/en/indeed-jobs/b270c2f205faa25cf03c/accounting-technician/"
-                                          title="Accounting Technician"><strong>Accounting Technician</strong></a><br><span>Québec&nbsp;&nbsp;|&nbsp;&nbsp;Full-time</span><br><a
-                                            class="apply"
-                                            href="https://auray.com/en/indeed-jobs/b270c2f205faa25cf03c/accounting-technician/"
-                                            title="Accounting Technician">Apply</a></p>
-                                </div>
+                            @endforeach
                                 <div class="clearfix"></div>
                             </div>
                     </div>

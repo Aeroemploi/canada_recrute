@@ -110,4 +110,27 @@
         </ul>
     </li>
 
+    <li {!! (Request::is('jobs') || Request::is('jobs/create') || Request::is('jobs_profile') || Request::is('jobs/*') || Request::is('deleted_jobs') ? 'class="active"' : '') !!}>
+        <a href="#">
+            <i class="livicon" data-name="template" data-size="18" data-c="#6CC66C" data-hc="#6CC66C"
+               data-loop="true"></i>
+            <span class="title">Jobs</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="sub-menu">
+            <li {!! (Request::is('jobs') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('jobs') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    Jobs
+                </a>
+            </li>
+            <li {!! (Request::is('jobs/create') ? 'class="active" id="active"' : '') !!}>
+                <a href="{{ URL::to('jobs/create') }}">
+                    <i class="fa fa-angle-double-right"></i>
+                    Add New Jobs
+                </a>
+            </li>
+        </ul>
+    </li>
+
 </ul>

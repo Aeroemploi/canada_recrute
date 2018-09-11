@@ -80,6 +80,15 @@ Route::group([ 'middleware' => 'admin'], function () {
     });
     Route::resource('templates', 'TemplateController');
 
+    Route::group([ 'prefix' => 'jobs'], function () {
+        Route::get('data', 'JobsController@data')->name('jobs.data');
+        Route::post('{jobs}/updating', 'JobsController@updating')->name('jobs.updating');
+        Route::get('{jobs}/delete', 'JobsController@destroy')->name('jobs.delete');
+        Route::get('{jobs}/confirm-delete', 'JobsController@getModalDelete')->name('jobs.confirm-delete');
+        Route::get('{jobs}/assign', 'JobsController@assign')->name('jobs.assign');
+    });
+    Route::resource('jobs', 'JobsController');
+
     Route::group([ 'prefix' => 'forms'], function () {
         Route::get('data', 'FormsController@data')->name('forms.data');
         Route::post('addControls', 'FormsController@addFormControl')->name('forms.controls');

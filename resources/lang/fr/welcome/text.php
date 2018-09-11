@@ -15,7 +15,7 @@ return [
         'dare' => 'Osez le canada',
         'more_than' => 'Plus de 100000 poste à pourvoir',
     ],
-
+    'apply' => 'Appliquer',
     'form'              => [
         'firstname'         => 'Prénom',
         'lastname'          => 'Nom de Famille',
@@ -37,5 +37,10 @@ return [
     ],
     'footer'            => [
         'impatient'           => 'Nous sommes impatients de vous rencontrer!',
-    ]
+    ],
+    'jobs' => [
+        'full_time' => 'Temps Plein',
+        'part_time' => 'Temps Partiel',
+        'contractor' => 'À Contrat',
+    ],
 ];

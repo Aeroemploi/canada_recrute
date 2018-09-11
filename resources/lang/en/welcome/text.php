@@ -15,6 +15,7 @@ return [
         'dare' => 'Dare the canada',
         'more_than' => 'More than 100000 jobs to fill',
     ],
+    'apply' => 'Apply',
     'form'              => [
         'firstname'         => 'First Name',
         'lastname'          => 'Last Name',
@@ -36,5 +37,10 @@ return [
     ],
     'footer'            => [
         'impatient'           => 'We are impatient to meet you!',
-    ]
+    ],
+    'jobs' => [
+        'full_time' => 'Full Time',
+        'part_time' => 'Part Time',
+        'contractor' => 'Contractor',
+    ],
 ];

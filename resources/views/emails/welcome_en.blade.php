@@ -10,8 +10,6 @@
         # Welcome  {!! $user_array['user_name'] !!},<br>
 
         We thank you for your subscription of the canada recruit events.<br />
-        Nous vous remerçions de vous êtes inscrit pour l'événement canada recrute.<br />
-
 
         Regards,
     </div>
