@@ -1,19 +1,20 @@
-<?php
+﻿<?php
 /**
     File for handling the text of the welcome page
  */
 
 return [
     'title'             => 'Welcome Home',
-    'recruitment'       => 'Recruitment session',
+    'recruitment'       => 'Sign up for our next chat session for the posted jobs.',
     'time'              => 'from :from to :to',
-    'avail_job'         => 'Available Jobs',
-    'propulse_by'         => 'Propulse by',
+    'avail_job'         => 'Thousands of job postings to fill',
+    'propulse_by'         => 'Power by',
     'header'            => [
         'canada' => 'Canada',
-        'recrute' => 'Recruit',
-        'dare' => 'Dare the canada',
+        'recrute' => 'Hire',
+        'dare' => 'A world of opportunities awaits you in Canada.',
         'more_than' => 'More than 100000 jobs to fill',
+        'contact' => 'Contact Us'
     ],
     'apply' => 'Apply',
     'form'              => [
@@ -36,11 +37,15 @@ return [
         'login'             => 'Log In',
     ],
     'footer'            => [
-        'impatient'           => 'We are impatient to meet you!',
+        'impatient'           => 'It will be our pleasure to meet you!',
+        'copy' => 'AURAY Sourcing International Inc. AURAY Sourcing ™ is a trademark of AURAY Capital International Inc., used under license.',
     ],
     'jobs' => [
         'full_time' => 'Full Time',
         'part_time' => 'Part Time',
         'contractor' => 'Contractor',
     ],
+    'about' =>[
+	    'content' => 'AURAY Sourcing is a subsidiary of Raymond Chabot Grant Thornton, a leading accounting firm in Quebec. AURAY Sourcing offers unparalleled expertise and a comprehensive recruitment and international mobility service to meet the needs of local businesses requiring skilled labor and foreign job seekers.'
+    ]
 ];

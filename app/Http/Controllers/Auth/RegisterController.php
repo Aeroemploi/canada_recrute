@@ -172,17 +172,20 @@ class RegisterController extends Controller
 
             $user->save();
 
-            $local = (Session::has('locale'))? Session::get('locale') : 'en';
+            $local = (Session::has('locale'))? Session::get('locale') : 'fr';
 
             $user_array = [
-                'user_name' => $user->email
+                'user_name' => $user->email,
+				'first_name' => $user->first_name,
+				'last_name' => $user->last_name,
+				'subject' => trans('users/emails.subject')
             ];
 
             Mail::send('emails.welcome_'.$local, ['user_array' => $user_array], function($message) use ($user)
             {
-                $message->from('info@canadarecrute.com', 'Info');
+                $message->from('info@canadarecrute.com', trans('users/emails.fromname'));
 
-                $message->to($user->email)->subject('Auray Sourcing info');
+                $message->to($user->email)->subject(trans('users/emails.subject'));
             });
             // Redirect to the home page with success menu
             return Redirect::route('home')->with('success', trans('users/message.success.create'));

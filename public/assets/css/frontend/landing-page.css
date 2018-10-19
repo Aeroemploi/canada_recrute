@@ -1,6 +1,17 @@
 body {
     margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
 }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Poppins', sans-serif;
+}
+h3{
+    font-size: 25px;
+}
+.no-pad {
+    padding: 0;
+}
+
 .par-image, .par-image img {
     max-width: 1980px;
     max-height: 340px;
@@ -11,15 +22,13 @@ div .title {
     color: #b0762e;
     font-size: 24px;
     font-weight: bold;
-    padding-top: 30px;
+    padding: 0 0 32px;
 }
 
 div .title-left {
-    text-align: left;
     color: #b0762e;
     font-size: 24px;
     font-weight: bold;
-    padding-top: 30px;
 }
 
 div.imageContainer img {
@@ -27,7 +36,7 @@ div.imageContainer img {
     height: 340px;
 }
 
-div{
+div {
     text-align: center;
 }
 
@@ -43,12 +52,47 @@ div{
     color: #ffffff;
 }
 
+.wrap-img-logo {
+    display: flex;
+    align-items: center;
+}
+.wrap-img{
+    margin-top: 45px;
+}
+.img-logo {
+    height: 72px;
+}
+
 .header-block {
     position: relative;
     top: 80px;
     left: 20px;
     margin: 15px 0;
     text-align: left;
+}
+
+.nav {
+    padding: 7px 0;
+    justify-content: flex-end;
+}
+
+.nav a {
+    padding: 0 8px;
+    font-size: 18px;
+    color: #816104;
+}
+
+.nav a:hover, .nav a:focus, .nav a:active {
+    color: #929396;
+}
+
+.nav > a.fb {
+    color: #4267b2;
+    font-size: 24px;
+}
+
+.nav a.fb:hover, .nav a.fb:focus, .nav a.fb:active {
+    color: #090968;
 }
 
 .main {
@@ -71,26 +115,65 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 960px) {
-    .title {
-        font-size: 1.6em;
-    }
+/**/
+section.parallax-top {
+    background: transparent;
+    color: #ffffff;
+    height: 60vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
-header {
-    min-height: 375px;
+section.parallax {
+    background: transparent;
+    color: #ffffff;
+    height: 120vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.parallax-small {
+    height: 305px;
+    background: transparent;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+header h2{
+    font-size: 34px;
+    color: #b88e2e;
+}
+form .form-group input {
+    border-radius: 0;
+}
+
+form .form-group button {
+    margin: 16px 0 0;
+    background-color: #fff;
+    text-transform: none !important;
+}
+
+form .form-group button:hover, form .form-group button:focus, form .form-group button:active {
+    background-color: #ef6f6c;
+}
+
+form button.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+header.top {
+    padding: 50px 0;
 }
 
 .hastag {
-    position:relative;
-    top: 50px;
-    left: 35px;
+   padding-bottom: 50px;
 }
 
 .hastag h2 {
     font-size: 36px;
-    text-align: left;
-    vertical-align: middle;
     color: #b88e2e;
 }
 
@@ -100,83 +183,55 @@ header {
 }
 
 .canada_dare {
-    position:relative;
-    top: 170px;
-    left: 35px;
+
 }
 
 .canada_dare h1 {
     text-align: center;
-    font-size: 46px;
+    font-size: 44px;
     color: #816104;
 }
 
-.canada_dare span.subtitle {
-    text-align: center;
-    font-size: 36px;
-    color: #b0762e;
+.inner form .form-group.name input {
+    width: calc(50% - 8px);
+    float: left;
+    margin-bottom: 16px;
 }
 
-#reg_form .form-group {
-    width: 90%;
-    text-align: center;
-    margin: 15px auto;
+.inner form .form-group.name input#first_name {
+    margin-right: 8px;
 }
 
-#reg_form .form-group.name {
-    width: 45%;
-    display: inline-block;
-    margin-bottom: 0;
-}
-
-@media (max-width: 600px) {
-    .hastag h2 {
-        font-size: 24px;
-        text-align: left;
-        vertical-align: middle;
-        color: #b88e2e;
-    }
-
-    .hastag h2 span {
-        font-size: 24px;
-        color: #816104;
-    }
-
-    .canada_dare h1 {
-        text-align: center;
-        font-size: 36px;
-        color: #816104;
-    }
-
-    .canada_dare span.subtitle {
-        text-align: center;
-        font-size: 24px;
-        color: #b0762e;
-    }
+.inner form .form-group.name input#last_name {
+    margin-left: 8px;
 }
 
 .decoration {
-    position: absolute;
-    top: -15px;
-    left: 46%;
-    background: rgba(135,136,138, 1);
+    margin-top: -43px;
+    background: rgba(135, 136, 138, 1);
 }
 
-.parallax_wrapper .wrapper {
-    margin: 0 auto;
-    max-width: 690px;
-    max-height: 595px;
-    background: rgba(128,129,132, 0.93);
+.wrap {
+    height: 689px;
+    background: rgba(128, 129, 132, 0.93);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
-.parallax_wrapper .inner {
-    position: relative;
-    margin: 50px auto;
-    max-width: 565px;
+.inner {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     border: 1px solid #ffffff;
+    padding: 30px;
+    align-self: center;
+    width: 80%;
 }
-
-.parallax_wrapper .file {
+.form-container {
+    width: 100%;
+}
+.file {
     color: #ffffff;
     text-align: left;
 }
@@ -186,10 +241,15 @@ header {
     text-align: left !important;
 }
 
-#pic {
-    display: inline;
+.fileinput > .form-control {
+    padding: 16px;
+    width: 100% !important;
 }
-
+.fileinput{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+}
 .fileinput-new {
     color: #ffffff;
 }
@@ -206,73 +266,90 @@ header {
     text-align: left;
 }
 
-.fileinput>.form-control {
-    width: 62% !important;
-    border-right: 0;
-}
-
 .desc {
-    width:60%;
-    text-align: left;
     font-size: 20px;
 }
 
-.jobs {
+section.about {
+    background-color: #ebebeb;
+    padding: 50px 0;
+}
+
+section.about p {
+    padding: 64px 0;
+    font-size: 33px;
+    color: #816104;
+    line-height: 41px;
+}
+
+section.jobs {
     padding-top: 30px;
 }
 
-.jobs .indeed-jobs div.job {
-    float: left;
-    text-align:left;
-    width: 348px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+section.jobs header {
+    min-height: auto;
+    flex-flow: column;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+section.jobs .indeed-jobs article.job a.job-title {
+    text-align: left;
     border: 1px solid #808184;
     color: #816104;
     min-height: 135px;
     transition-timing-function: linear;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
+    display: block;
+    padding: 15px;
 }
 
-.job:hover {
+section.jobs .indeed-jobs article.job a.job-title:hover, section.jobs .indeed-jobs article.job a.job-title:active, section.jobs .indeed-jobs article.job a.job-title:focus {
     background: #808184;
     color: #ffffff;
 }
 
-.jobs .indeed-jobs div.job p a, .jobs .indeed-jobs div.job p span {
-    color: #816104;
-    transition-timing-function: linear;
-    transition-duration: 500ms;
-}
-
-.jobs .indeed-jobs div.job p:hover a, .jobs .indeed-jobs div.job p:hover span {
-    color: #ffffff;
-}
-
-.jobs .indeed-jobs div.job p {
-    max-width: 230px;
-    margin: 25px auto 0;
+section.jobs .indeed-jobs article.job {
+    margin: 0 0 32px;
 }
 
 footer {
     min-height: 250px;
     position: relative;
+    background-color: #8a7f6e;
+    padding: 30px 0;
 }
 
-footer h3 {
-    margin-top: 35px;
-    font-size: 3em;
-    color: #b0762e;
-    font-weight: bolder;
+footer .wrap-content-footer {
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.copy p{
+    font-size: 12px;
+}
 footer .auray_sourcing {
-    margin-top: 50px;
-    width: 350px;
-    float: right;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.job p{
+footer .auray_sourcing p {
+    margin-right: 20px;
+    color: #fff;
+}
+
+footer .auray_sourcing img {
+    width: auto;
+    height: 32px;
+}
+footer .copy{
+    margin-top: 32px;
+    color: #fff;
+}
+
+article.job {
     cursor: pointer;
 }
 
@@ -280,18 +357,135 @@ footer .auray_sourcing {
     text-align: center;
 }
 
-@media (max-width: 400px) {
-    footer {
-        min-height: 350px;
-        position: relative;
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+    h2 {
+        font-size: 26px;
+    }
+    h3 {
+         font-size: 20px;
+     }
+    .hastag h2 {
+        font-size: 30px;
+    }
+    .hastag h2 span {
+        font-size: 30px;
+    }
+    .canada_dare h1 {
+        font-size: 37px;
+    }
+    header h2{
+        font-size: 29px;
+
     }
 
-    .jobs .indeed-jobs div.job {
-        width: 300px;
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) {
+    h2 {
+        font-size: 22px;
+    }
+    .canada_dare {
+    }
+    .canada_dare h1 {
+        font-size: 27px;
+    }
+    header h2 {
+        font-size: 21px;
+        line-height: 1.3;
+    }
+    h3 {
+        font-size: 18px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+
+    header.top {
+        padding:15px 0;
+    }
+    h2{
+        font-size:18px ;
+    }
+    header h2 {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+    .nav {
+       padding: 0;
+    }
+    .hastag h2 {
+        font-size: 22px;
+    }
+    .hastag h2 span {
+        font-size: 22px;
+    }
+    .hastag h2 span img{
+        height: 22px;
+    }
+    footer .wrap-content-footer {
+        height: 66px;
+    }
+    .wrap-img {
+        margin-top: 23px;
+    }
+    footer .auray_sourcing img {
+        height: 22px;
     }
 
-    .fileinput>.form-control {
-        width: 100% !important;
-        border-right: 0;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    h2 {
+        font-size: 20px;
     }
+
+    .wrap-img-logo {
+        justify-content: center;
+    }
+    .nav {
+        padding: 15px 0;
+        justify-content: center;
+    }
+
+    .hastag {
+        padding: 15px;
+    }
+
+    section.parallax {
+        margin: 50px 0;
+        height: auto;
+    }
+
+    section.jobs {
+        padding-top: 15px;
+    }
+
+    section.jobs header {
+        padding: 15px 0;
+    }
+
+
+    footer .auray_sourcing {
+        justify-content: center;
+        margin-bottom: -12px;
+        margin-top: 33px;
+    }
+
+    section.jobs .indeed-jobs article.job a.job-title {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .inner {
+        padding: 15px;
+    }
+
+    .decoration {
+        margin-top: -27px;
+    }
+
 }

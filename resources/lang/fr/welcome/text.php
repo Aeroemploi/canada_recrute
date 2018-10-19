@@ -5,15 +5,15 @@
 
 return [
     'title'             => 'Bienvenue à l\'accueuil',
-    'recruitment'       => 'Scéance de recrutement',
+    'recruitment'       => 'Inscrivez-vous à notre prochaine séance de clavardage pour les emplois affichés.',
     'time'              => 'de :from à :to',
-    'avail_job'         => 'Emplois disponibles',
-    'propulse_by'         => 'Propulser par',
+    'avail_job'         => 'Des milliers de postes à pourvoir!',
+    'propulse_by'         => 'Propulsé par',
     'header'            => [
         'canada' => 'Canada',
         'recrute' => 'Recrute',
-        'dare' => 'Osez le canada',
-        'more_than' => 'Plus de 100000 poste à pourvoir',
+        'dare' => 'Un monde d’opportunités vous attend au Canada.',
+	    'contact' => 'Nous joindre',
     ],
     'apply' => 'Appliquer',
     'form'              => [
@@ -22,7 +22,7 @@ return [
         'email'             => 'Courriel',
         'password'          => 'Mot de passe',
         'confirmpassword'   => 'Confimer le mot de passe',
-        'file_upload'       => 'Téléversé votre CV',
+        'file_upload'       => 'Télécharger votre CV',
 
         'control'           => [
             'select'            => 'Selectionné le fichier',
@@ -36,11 +36,15 @@ return [
         'login'             => 'connecté'
     ],
     'footer'            => [
-        'impatient'           => 'Nous sommes impatients de vous rencontrer!',
+        'impatient'           => 'Au plaisir de vous rencontrer!',
+	    'copy' => 'AURAY Sourcing International Inc. AURAY Sourcing MC est une marque de commerce d’AURAY Capital International Inc., employée sous licence.',
     ],
     'jobs' => [
         'full_time' => 'Temps Plein',
         'part_time' => 'Temps Partiel',
         'contractor' => 'À Contrat',
     ],
+	'about' =>[
+		'content' => 'AURAY Sourcing est une filiale de Raymond Chabot Grant Thornton, société comptable de première importance au Québec. AURAY Sourcing offre une expertise inégalée et un service complet en recrutement et mobilité international afin de répondre aux entreprises d’ici requérant une main d’œuvre qualifiée et aux candidats étrangers à la recherche d’un emploi.'
+	]
 ];
